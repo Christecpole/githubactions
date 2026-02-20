@@ -1,0 +1,20 @@
+name: "03-push filtre-branche.yml"
+
+on: 
+  pull_request:
+    branches:
+      - main
+
+
+
+jobs:
+  afficher-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Afficher des infos"
+        run: |
+          echo  "PR"
+          echo  "branch detecte"
+          echo  "branch : ${{github.head_ref}}"
+          echo  "cible : ${{github.actor}}"
+       
