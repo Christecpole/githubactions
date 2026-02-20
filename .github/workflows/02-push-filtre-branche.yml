@@ -1,0 +1,19 @@
+name: "02-push filtre-branche.yml"
+
+on: 
+  push:
+    branches:
+      - main
+      - develop
+
+
+jobs:
+  afficher-info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Afficher des infos"
+        run: |
+          echo  "branch detecte"
+          echo  "branch : ${{github.actor}}"
+       
+       
